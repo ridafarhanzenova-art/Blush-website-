@@ -1,0 +1,45 @@
+// Blush Website JavaScript
+
+// Welcome message
+window.onload = function () {
+    console.log("Welcome to Blush Beauty!");
+};
+
+
+// Shop Now button action
+function shopNow() {
+    alert("Welcome to Blush! Explore our beauty collection 💄");
+}
+
+
+// Product hover effect
+const products = document.querySelectorAll(".product");
+
+products.forEach(product => {
+    product.addEventListener("mouseover", () => {
+        product.style.transform = "scale(1.05)";
+    });
+
+    product.addEventListener("mouseout", () => {
+        product.style.transform = "scale(1)";
+    });
+});
+
+
+// Contact button
+function contactUs() {
+    alert("Thank you for contacting Blush. We will get back to you soon!");
+}
+
+
+// Simple search feature
+function searchProduct() {
+    let input = document.getElementById("search").value.toLowerCase();
+
+    if (input === "") {
+        alert("Please enter a product name");
+    } 
+    else {
+        alert("Searching for: " + input);
+    }
+}
